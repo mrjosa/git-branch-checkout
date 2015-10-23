@@ -1,0 +1,9 @@
+{
+  "name": "git-node",
+  "description": "A package getting changed files",
+  "author": "josa",
+  "dependencies": {
+  	"sprintf" : "latest",
+  	"fs-extra" : "latest"
+  }
+}

@@ -4,7 +4,12 @@ var fs = require('fs-extra');
 
 var args = process.argv;
 	
-if (args.length == 5) {
+if (args.length == 4) {
+	fs.ensureDir(sprintf("%s/output", args[3]), function(err) {
+		execute_git_diff(args[2], "master", args[3]);
+	});
+}
+else if (args.length == 5) {
 	fs.ensureDir(sprintf("%s/output", args[4]), function(err) {
 		execute_git_diff(args[2], args[3], args[4]);
 	});
